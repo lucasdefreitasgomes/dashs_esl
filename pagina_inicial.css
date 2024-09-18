@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Centralizando o logo no meio do cabeçalho */
+header {
+    display: flex;
+    justify-content: center; /* Centraliza o logo horizontalmente */
+    align-items: center;
+    padding: 1em 2em;
+    background: #00509E;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.logo h1 {
+    font-size: 1.8em;
+    color: #fff;
+}
+
+/* Ajuste para o botão de menu */
+.menu-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 1em;
+    z-index: 20;
+}
+
+.menu-btn {
+    font-size: 1.5em;
+    background: #007BFF;
+    color: white;
+    padding: 0.1em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-left: 1em;
+}
+
+.menu-btn:hover {
+    background: #00509E;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #00509E;
+    padding: 1em;
+    border-radius: 5px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-content.active {
+    display: block;
+}
+
+.menu-section h3 {
+    color: white;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.menu-section ul {
+    list-style: none;
+}
+
+.menu-section ul li {
+    margin: 0.5em 0;
+}
+
+.menu-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.menu-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://source.unsplash.com/1600x900/?logistics,warehouse') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 80, 158, 0.8);
+    padding: 2em;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.btn {
+    background: #007BFF;
+    color: #fff;
+    padding: 0.8em 2em;
+    border-radius: 50px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #00509E;
+}
+
+.features {
+    padding: 4em 2em;
+    background: #F4F4F9;
+    text-align: center;
+    color: #00509E;
+}
+
+.features h2 {
+    font-size: 2.5em;
+    margin-bottom: 2em;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2em;
+}
+
+.feature-item {
+    background: #007BFF;
+    padding: 2em;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    color: #fff;
+}
+
+.feature-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.feature-item p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+footer {
+    padding: 2em;
+    text-align: center;
+    background: #00509E;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1em;
+}
+
+/* Animação e ajustes da mãozinha */
+.hand-pointer {
+    position: fixed;
+    top: 70px; /* Aumentando a distância do topo */
+    left: 50px;
+    font-size: 2.5em;
+    z-index: 50;
+    opacity: 0;
+    animation: showHand 1s ease-in-out 0.5s forwards, bounce 1s ease-in-out infinite;
+    transform: rotate(180deg); /* Faz a mãozinha apontar para cima */
+}
+
+@keyframes showHand {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
